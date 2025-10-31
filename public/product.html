@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#667eea">
+    <title data-translate="productDetails">Ürün Detayları - A2hand</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/modern-ui.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">A2hand</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/" data-translate="home">Ana Sayfa</a>
+                <a href="/messages" id="messagesLink" style="display: none;" data-translate="messages">Mesajlarım</a>
+                <select id="languageSelect" class="language-selector" style="margin-right: 0.5rem;">
+                    <option value="tr">🇹🇷 TR</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="mk">🇲🇰 MK</option>
+                </select>
+                <span id="userInfo" style="display: none;"></span>
+                <button id="loginBtn" class="btn btn-outline" data-translate="login">Giriş Yap</button>
+                <button id="registerBtn" class="btn btn-primary" data-translate="register">Kayıt Ol</button>
+                <button id="logoutBtn" class="btn btn-danger" style="display: none;" data-translate="logout">Çıkış</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="productDetails" style="margin: 2rem 0;">
+            <!-- Ürün detayları buraya yüklenecek -->
+            <div style="text-align: center; padding: 3rem;">
+                <div class="loading" data-translate="loading">Yükleniyor...</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 A2hand. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="/static/translations.js?v=20250126"></script>
+    <script src="/static/product.js"></script>
+</body>
+</html>
+

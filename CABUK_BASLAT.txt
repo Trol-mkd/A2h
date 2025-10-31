@@ -1,0 +1,32 @@
+A2HAND - HIZLI BAŞLATMA
+========================
+
+ADIM 1: BAĞIMLILIKLARI YÜKLEYIN
+---------------------------------
+Terminal'de proje klasöründe:
+  pip install -r requirements.txt
+
+ADIM 2: UYGULAMAYI BAŞLATIN
+----------------------------
+Windows: start.bat dosyasına çift tıklayın
+veya terminalde: python server.py
+
+ADIM 3: TARAYICIDA AÇIN
+-------------------------
+http://localhost:8000
+
+ADIM 4: TEST EDİN
+------------------
+1. "Kayıt Ol" ile yeni kullanıcı oluşturun
+2. "Giriş Yap" ile sisteme girin
+3. "+" butonuna basarak resimlerle yeni ilan ekleyin
+4. Arama kutusundan ürün arayın
+5. Kategori ve şehir filtrelerini kullanın
+6. Ürünlere tıklayıp detay görün
+7. "Satıcıya Mesaj Gönder" ile mesajlaşın
+8. "Mesajlarım" linkinden mesajları görüntüleyin
+
+NOT: Veriler a2hand.db dosyasında saklanır. 
+     MongoDB veya başka bir sunucu GEREKMEZ!
+
+İYİ EĞLENCELER! 🎉

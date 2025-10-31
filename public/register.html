@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#667eea">
+    <title>Kayıt Ol - A2hand</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">A2hand</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/" data-translate="home">Ana Sayfa</a>
+                <a href="/login" data-translate="login">Giriş Yap</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2 data-translate="registerTitle">Kayıt Ol</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label data-translate="username">Kullanıcı Adı</label>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="email">Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="passwordMin">Şifre (en az 8 karakter)</label>
+                        <input type="password" name="password" required minlength="8">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" data-translate="registerButton">Kayıt Ol</button>
+                    <p style="text-align: center; margin-top: 1rem;">
+                        <span data-translate="hasAccount">Zaten hesabınız var mı?</span> <a href="/login" data-translate="login">Giriş Yap</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/translations.js?v=20250126"></script>
+    <script src="/static/register.js"></script>
+</body>
+</html>

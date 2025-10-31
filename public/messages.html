@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#667eea">
+    <title>Mesajlarım - A2hand</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/chat.css">
+    <link rel="stylesheet" href="/static/message-image.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">A2hand</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/" data-translate="home">Ana Sayfa</a>
+                <select id="languageSelect" class="currency-selector" style="margin-right: 0.5rem;">
+                    <option value="tr">TR</option>
+                    <option value="en">EN</option>
+                    <option value="mk">MK</option>
+                </select>
+                <button id="logoutBtn" class="btn btn-danger" data-translate="logout">Çıkış</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="chat-layout">
+            <!-- Konuşmalar Listesi -->
+            <div class="conversations-list">
+                <h2 data-translate="conversations">Mesajlarım</h2>
+                <div id="conversationsContainer">
+                    <!-- Konuşmalar buraya yüklenecek -->
+                </div>
+            </div>
+
+            <!-- Chat Ekranı -->
+            <div class="chat-screen">
+                <div id="chatHeader" class="chat-header">
+                    <span id="chatTitle" data-translate="selectConversation">Bir konuşma seçin</span>
+                </div>
+                <div id="messagesList" class="messages-list">
+                    <!-- Mesajlar buraya yüklenecek -->
+                </div>
+                <div id="messageInputArea" class="message-input-area" style="display: none;">
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    <button id="attachBtn" style="width: 50px; height: 50px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);">📎</button>
+                    <input type="text" id="messageInput" data-translate-placeholder="typeMessage" placeholder="Mesajınızı yazın...">
+                    <button id="sendBtn" class="btn btn-primary" style="padding: 0.75rem 2rem; border-radius: 25px; font-weight: 600;" data-translate="sendMessage">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/translations.js?v=20250126"></script>
+    <script src="/static/messages.js"></script>
+</body>
+</html>

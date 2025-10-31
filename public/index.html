@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#667eea">
+    <title>A2hand - İkinci El Alışveriş</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/modern-ui.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">A2hand</a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="active" data-translate="home">Ana Sayfa</a>
+                <a href="/messages" id="messagesLink" style="display: none;" data-translate="messages">Mesajlarım</a>
+                <select id="languageSelect" class="language-selector" style="margin-right: 0.5rem;">
+                    <option value="tr">🇹🇷 TR</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="mk">🇲🇰 MK</option>
+                </select>
+                <span id="userInfo" style="display: none;"></span>
+                <button id="loginBtn" class="btn btn-outline" data-translate="login">Giriş Yap</button>
+                <button id="registerBtn" class="btn btn-primary" data-translate="register">Kayıt Ol</button>
+                <button id="logoutBtn" class="btn btn-danger" style="display: none;" data-translate="logout">Çıkış</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <h1>A2hand'a Hoş Geldiniz</h1>
+            <p>İkinci el ürünlerinizi kolayca satın, yeni ürünlere uygun fiyatlara ulaşın</p>
+        </header>
+
+        <!-- Arama ve Filtreler -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Ürün ara...">
+                <button id="searchBtn" class="btn btn-primary">Ara</button>
+            </div>
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">Tüm Kategoriler</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="ev">Ev Eşyası</option>
+                    <option value="moda">Moda</option>
+                    <option value="otomotiv">Otomotiv</option>
+                    <option value="hobi">Hobi</option>
+                    <option value="diğer">Diğer</option>
+                </select>
+                <select id="locationFilter">
+                    <option value="">Tüm Şehirler</option>
+                    <option value="skopje">Skopje</option>
+                    <option value="bitola">Bitola</option>
+                    <option value="kumanovo">Kumanovo</option>
+                    <option value="prilep">Prilep</option>
+                    <option value="tetovo">Tetovo</option>
+                    <option value="ohrid">Ohrid</option>
+                    <option value="veles">Veles</option>
+                    <option value="stip">Štip</option>
+                    <option value="gostivar">Gostivar</option>
+                    <option value="strumica">Strumica</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Ürün Listesi -->
+        <div id="productsContainer" class="products-grid">
+            <!-- Ürünler buraya yüklenecek -->
+        </div>
+
+        <!-- İlan Ekleme Formu (Giriş yapanlar için) -->
+        <div id="addProductModal" class="modal">
+            <div class="modal-content" style="max-width: 800px;">
+                <span class="close">&times;</span>
+                <h2>Yeni İlan Ekle</h2>
+                <form id="productForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Başlık *</label>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama *</label>
+                        <textarea name="description" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Fiyat *</label>
+                            <input type="number" name="price" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Para Birimi *</label>
+                            <select name="currency" required>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="MKD">MKD (ден)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Kategori *</label>
+                            <select name="category" required>
+                                <option value="elektronik">Elektronik</option>
+                                <option value="ev">Ev Eşyası</option>
+                                <option value="moda">Moda</option>
+                                <option value="otomotiv">Otomotiv</option>
+                                <option value="hobi">Hobi</option>
+                                <option value="diğer">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Şehir *</label>
+                            <select name="location" required>
+                                <option value="skopje">Skopje</option>
+                                <option value="bitola">Bitola</option>
+                                <option value="kumanovo">Kumanovo</option>
+                                <option value="prilep">Prilep</option>
+                                <option value="tetovo">Tetovo</option>
+                                <option value="ohrid">Ohrid</option>
+                                <option value="veles">Veles</option>
+                                <option value="stip">Štip</option>
+                                <option value="gostivar">Gostivar</option>
+                                <option value="strumica">Strumica</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Resimler *</label>
+                        <input type="file" id="imageInput" multiple accept="image/*" required>
+                        <div id="imagePreview" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">İlanı Yayınla</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 A2hand. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="/static/translations.js?v=20250126"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Message Image Styles */
+.message-image-container {
+    margin-bottom: 0.5rem;
+}
+
+.message-image {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.message-image:hover {
+    transform: scale(1.02);
+}
+
+.message-bubble.sent .message-image {
+    border-bottom-right-radius: 4px;
+}
+
+.message-bubble.received .message-image {
+    border-bottom-left-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .message-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+

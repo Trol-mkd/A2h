@@ -1,0 +1,38 @@
+A2HAND KURULUM KILAVUZU
+======================
+
+1. GEREKSINIMLER:
+   - Python 3.8 veya üstü
+   - İNTERNET BAĞLANTISI (sadece paket indirmek için)
+
+2. PYTHON BAĞIMLILIKLARI:
+
+   Windows:
+   pip install -r requirements.txt
+
+   Linux/Mac:
+   pip3 install -r requirements.txt
+
+3. UYGULAMAYI BAŞLATMA:
+
+   Yöntem 1 - Python ile:
+   python server.py
+
+   Yöntem 2 - Bat dosyası ile (Windows):
+   start.bat (çift tıklayın)
+
+4. TARAYICIDA AÇMA:
+   http://localhost:8000
+
+5. İLK KULLANIM:
+   - Kayıt Ol ile yeni hesap oluşturun
+   - Giriş Yap ile sisteme girin
+   - "+" butonuna basarak ilk ilanınızı ekleyin
+   - Arama kutusunu kullanarak ürün arayın
+   - Mesajlarım linkinden mesajlarınızı görüntüleyin
+
+NOT: Veriler a2hand.db dosyasında saklanır.
+     MongoDB veya başka bir sunucu kurmanıza GEREK YOK!
+     
+     Resimler uploads/ klasöründe saklanır.
+     Veritabanı a2hand.db dosyasında saklanır.
